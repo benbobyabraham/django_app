@@ -4,8 +4,8 @@
 <section class="content">
    <section class="post_form">
       <form action="/" method="POST">
-         {% csrf_token %} 
-         <input type="text" none="none" placeholder="Name" required>
+         {% csrf_token %}
+         <input type="text" name="name" placeholder="Name" required>
          <textarea name="body" placeholder="Tell us anything..." required> </textarea>
          <input type="submit" value="Post"/>
       </form>

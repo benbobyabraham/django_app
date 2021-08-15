@@ -11,9 +11,9 @@ def index(request):
 		form = PostForm(request.POST)
 		#If the form is valid
 		if form.is_valid():
-	    	#Yes, Save
+			#Yes, Save
 			form.save()
-	    	
+
 			#Redirect to Home
 			return HttpResponseRedirect("/")
 		else:
@@ -32,4 +32,4 @@ def delete(request, post_id):
 	post = Post.objects.get(id = post_id)
 	post.delete()
 	output = 'POST ID is ' + str(post_id)
-	return HttpResponse(output)
+	return HttpResponseRedirect('/')
