@@ -14,22 +14,23 @@
       <ul>
          {% for post in posts %}
          <li>
-
-			<img class="menu_icon" src="{% static 'img/options.png' %}" />
-            <div class="logo">
+			<img class="menu_icon js-menu-icon" src="{% static 'img/options.png' %}" />
+         <div class="menu">
+            <a href="/delete/{{ post.id }}/">Delete</a>
+         </div>
+         <div class="logo">
 				<img src="{% static 'img/profile.png' %}" alt="">
 			</div>
 			<div class="name_body">
                <div class="name">{{ post.name }}</div>
                <div class="datetime">{{ post.created_at }}</div>
                <p>{{ post.body}}</p>
-               <a href='/delete/{{post.id}}'>delete</a>
-
-			   
             </div>
          </li>
          {% endfor %}
       </ul>
    </section>
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <script src="{% static 'js/posts.js' %}" ></script>
 </section>
 {% endblock %}

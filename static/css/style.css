@@ -9,6 +9,10 @@ body {
 	font-family: sans-serif;
 }
 
+section{
+	background-color: #ffffff;
+}
+
 .content{
 	max-width: 600px;
 	height: 100%;
@@ -78,7 +82,6 @@ Posts
 .posts li .menu a {
     text-decoration: none;
 }
-
 
 .posts li .logo{
 	flex-basis: 15%;
