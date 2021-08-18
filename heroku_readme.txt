@@ -1,3 +1,4 @@
+heroku login
 heroku create
 heroku git:create -a django-01-forum
 
