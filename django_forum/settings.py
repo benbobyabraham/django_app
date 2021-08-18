@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-k-3_#q=ypl@4_ghq*8&rrtguzd9ry8w-*%ma35)yu#uwn43#r-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['django-01-forum.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['django-01-forum.herokuapp.com','127.0.0.1','0.0.0.0']
 
 
 # Application definition
@@ -75,8 +75,16 @@ WSGI_APPLICATION = 'django_forum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'dd2hci8ujbjfne',
+        #'HOST': 'ec2-44-195-247-84.compute-1.amazonaws.com',
+        #'PORT': 5432,
+        #'USER': 'phuhajwdelmvfm',
+        #'PASSWORD':'e0156056d1bed34898318b75327e2693ff983dae90ab753609312c43859ee16f'
+
     }
 }
 
