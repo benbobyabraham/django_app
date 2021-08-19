@@ -5,8 +5,41 @@ Common
 html,
 body {
 	height: 100%;
-	background-color: #e6e6fa;
-	font-family: sans-serif;
+
+	font-family: math;
+    font: -webkit-control;
+}
+
+#heading{
+	font-size: 1.7rem;
+	max-width: 600px;
+	margin: 13px auto;
+	border-radius: 5px;
+    background: rgb(241, 241, 241);
+    padding: 15px 0px;
+    box-shadow: 1px 1px 5px black;
+}
+
+#heading p{
+	margin: 0;
+    padding: 10px;
+    flex-basis: 85%;
+    font-family: cursive;
+    font-size: 25px;
+}
+
+#heading img{
+	max-width: 10%;
+	padding: 0px;
+	position: relative;
+	right: 10px;
+	flex-basis: 15%;
+}
+
+.flex-container{
+	display: flex;
+	flex-direction: row;	
+	justify-content: space-between;
 }
 
 section{
@@ -19,7 +52,18 @@ section{
 	margin: 0 auto;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
+}
 
+.heading{
+	display: block;
+	box-shadow: 1px 0px 5px black;
+}
+
+.heading div{
+	padding: 10px 10px;
+	font-size: 30px;
+	font-family: sans-serif;
+	background: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -30,9 +74,17 @@ section{
 /*
 Posts
 ***********************/
+input{
+	background-color: rgba(224, 224, 224, 0.89);
+}
+
 .post_form{
-	padding: 20px 40px;
-	border-bottom: 1px solid #ccc;
+	border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background: rgb(241, 241, 241);
+    margin: 13px auto;
+    padding: 15px 30px;
+    box-shadow: 1px 1px 5px black;
 }
 
 .post_form input{
@@ -56,8 +108,13 @@ Posts
 	position: relative;
 	display: flex;
 	border-bottom: 1px solid #ccc;
-	padding: 20px 40px;
 	list-style: none;
+	border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background: rgb(241, 241, 241);
+    margin: 13px auto;
+    padding: 15px 30px;
+    box-shadow: 1px 1px 5px black;
 }
 
 .posts li .menu_icon {
@@ -73,10 +130,11 @@ Posts
     top: 40px;
     right: 15px;
     border: 1px solid #ccc; 
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 3px;
+	box-shadow: 1px 1px 5px gray;
 }
 
 .posts li .menu a {
@@ -101,6 +159,13 @@ Posts
 
 .posts li .name_body .datetime {
 	color: gray;
+}
+.posts li .name_body .image img{
+	width: 80%
+}
+
+.like-count img{
+	width: 20px;
 }
 
 
