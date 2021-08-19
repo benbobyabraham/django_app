@@ -22,7 +22,7 @@ class Post(models.Model):
 
     image = CloudinaryField('Image',blank=True,null=True)
 
-    like_count = models.IntegerField(default=0)
+    like_count = models.IntegerField(default=0,null=True,blank=True)
 
 
 class Edit(models.Model):

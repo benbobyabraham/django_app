@@ -34,9 +34,29 @@ def index(request):
 	print('step  5')
 	return render(request, 'posts.html', {'posts':posts,'form':form})
 
+def likes(request, post_id):
+	likedtweet = Post.objects.get(id = post_id)
+	likedtweet.like_count += 1
+	likedtweet.save()
+	return HttpResponseRedirect('/#'+str(post_id))
+
 def delete(request, post_id):
 	#Find post
 	post = Post.objects.get(id = post_id)
 	post.delete()
 	output = 'POST ID is ' + str(post_id)
 	return HttpResponseRedirect('/')
+
+def edit(request, post_id):
+	if request.method == "GET":
+		edittweet=Post.objects.get(id = post_id)
+	if request.method == "POST":
+		edittweet = Post.objects.get(id=post_id)
+		form = PostForm(request.POST,request.FILES,instance=edittweet)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect('/')
+		else:
+			return HttpResponse("not valid")
+
+	return render (request,'edit.html',{"edittweet":edittweet})

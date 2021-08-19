@@ -4,7 +4,7 @@
 
 <section class="content" style="visibility:hidden">
    <section class="post_form" style="visibility:visible">
-      <form action="/" method="POST" enctype="multipart/form-data">
+      <form action="" method="POST" enctype="multipart/form-data">
          {% csrf_token %}
          <input type="text" name="name" placeholder="Name" required/>
          <input name="body" rows="3"placeholder="Tell us anything...." required> </input>
@@ -18,7 +18,10 @@
          <li>
 			<img class="menu_icon js-menu-icon" src="{% static 'img/options.png' %}" />
          <div class="menu">
-            <a href="/delete/{{ post.id }}/">Delete</a>
+            <ul>
+               <li><a href="/delete/{{ post.id }}/">Delete</a></li>
+               <li><a href="/edit/{{ post.id }}/">Edit</a></li>
+            </ul>
          </div>
          <div class="logo">
 				<img src="{% static 'img/profile.png' %}" alt="">
@@ -33,7 +36,7 @@
                </div>
                {% endif %}
                <div class="like-count flex-container">
-                  <a href="/like/{{ post.id }}">
+                  <a id="{{post.id}}" href="/like/{{ post.id }}">
                      <img src="{% static 'img/like.png' %}" alt="" />
                   </a>
                   <div class="like">{{post.like_count}} Like</div>
