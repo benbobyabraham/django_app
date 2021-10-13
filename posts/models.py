@@ -13,7 +13,7 @@ class Post(models.Model):
     )
 
     body = models.CharField(
-        'Body',blank=True, null=True, max_length=140, db_index=True
+        'Body',blank=True, null=True, max_length=300, db_index=True
     )
 
     created_at = models.DateTimeField(
