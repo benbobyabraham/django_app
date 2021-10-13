@@ -6,3 +6,7 @@ web: gunicorn django_forum.wsgi
 heroku local
 
 git push heroku master
+--------------------------------------
+heroku git:remote -a app
+git push heroku main
+
