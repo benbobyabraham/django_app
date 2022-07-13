@@ -1,4 +1,6 @@
-# [Django - Twitter project](https://ben-twitter-project.herokuapp.com)
+# [Django-React - Twitter project](https://ben-twitter-project.herokuapp.com)
+
+# This is the twitter clone application created using the django-react stack
 
 ## Project Summary
 ```
